@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 100px;
+    background-color: #6f6fcc;
+    background-image: url(background.jpg);
+
+}
+
+header {
+    font-family: 'Itim', cursive;
+    text-align: center;
+    font-size: 50px;
+    color: #9a9ad0;
+}
+
+.grid1{
+    display: flex;
+    justify-content: center;
+    flex-flow: center wrap;
+}
+
+
+/*if screen is less than 600 px*/
+@media only screen and (max-width: 600px){
+    .grid1{
+       display: grid;
+       grid-template-rows: 1/-1;
+    }
+}
+
+
+input {
+    padding: 10px 20px 10px 20px;
+    margin: 5px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: -webkit-box-shadow: 4px 6px 23px -2px rgba(17,128,109,0.71);
+                -moz-box-shadow: 4px 6px 23px -2px rgba(17,128,109,0.71);
+                box-shadow: 4px 6px 23px -2px rgba(17,128,109,0.71);
+}
+
+
+
+button {
+    padding: 10px 20px 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color:rgba(252, 153, 20, 0.8);
+    border-radius: 4px;
+    box-shadow: -webkit-box-shadow: 4px 6px 23px -2px rgba(17,128,109,0.71);
+                -moz-box-shadow: 4px 6px 23px -2px rgba(17,128,109,0.71);
+                box-shadow: 4px 6px 23px -2px rgba(17,128,109,0.71);
+}
+
+
+button:hover {
+    cursor: pointer;
+}
+ul {
+    padding-left: 0;
+}
+
+ul li {
+    opacity: 1;
+    cursor: pointer;
+
+}
+
+
+section {
+    display: flex;
+      /*align-items: center;*/
+}
+
+.section--background {
+    margin: auto;
+    width: 50%;
+    background-color: #28282d;
+    border: 3px dotted green;
+    padding: 10px;   
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: flex-start;
+    padding: 0px 20px 10px 20px;
+    margin: 10px;
+    border: 2px dotted #28282d;
+    background-color: #58c658;
+}
+
+.li-wrapper {
+    display: flex;
+    font-family: 'Itim', cursive;
+    font-size: 20px;
+    color: #1a1a48;
+}
+
+
+.li-done-wrapper {
+    display: flex;
+    text-decoration: line-through;
+    font-family: 'Itim', cursive;
+    font-size: 20px;
+    color: #1a1a48;
+}
+
+/*if screen is less than 600 px*/
+@media only screen and (max-width: 600px){
+    .li-wrapper{
+      font-size: 15px;
+    }
+
+    .li-done-wrapper {
+        font-size:15 px;
+    }
+}
+
+.div {
+    display: flex;
+    flex-direction: : flex-end;
+}
