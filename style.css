@@ -82,24 +82,12 @@ section {
 
 .wrapper {
     display: flex;
-    flex-direction: flex-start;
+    justify-content: space-between;
+    align-content: center;
     padding: 0px 20px 10px 20px;
     margin: 10px;
-    border: 2px dotted #28282d;
+    border: 2px solid #28282d;
     background-color: #58c658;
-}
-
-.li-wrapper {
-    display: flex;
-    font-family: 'Itim', cursive;
-    font-size: 20px;
-    color: #1a1a48;
-}
-
-
-.li-done-wrapper {
-    display: flex;
-    text-decoration: line-through;
     font-family: 'Itim', cursive;
     font-size: 20px;
     color: #1a1a48;
@@ -107,16 +95,25 @@ section {
 
 /*if screen is less than 600 px*/
 @media only screen and (max-width: 600px){
-    .li-wrapper{
+    .wrapper{
       font-size: 15px;
     }
+}
 
-    .li-done-wrapper {
-        font-size:15 px;
-    }
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .div {
     display: flex;
-    flex-direction: : flex-end;
 }
+
+
+.taskDone {
+    text-decoration: line-through;
+}
+
+

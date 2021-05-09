@@ -8,26 +8,22 @@ const deleteButton =  document.getElementsByTagName("i");
 
 
 
-
 function strikeThrough(e) {
     console.log("event.target.tagName: " + e.target.tagName );
     if(e.target.tagName === "LI"){
-        e.target.classList.add("li-done-wrapper");
+            e.target.classList.toggle("taskDone");
     }
 }
 
 
 
 function createDeleteButtonIcon() {
-   console.log(document.createElement("i"));
-   console.log("li.length: " + li.length);
-    for(var index = 0; index < li.length; index++){
-        var createDeleteIcon = document.createElement("i");
+    for (var ind = 0; ind < li.length; ind++) {
+        var createDeleteButton = document.createElement("i");
         var createDiv = document.getElementsByClassName("div");
-        // console.log(createDiv);
-        createDeleteIcon.classList.add("fa","fa-trash");
         console.log(createDiv);
-        createDiv[index].appendChild(createDeleteIcon);
+        createDeleteButton.classList.add("fa", "fa-trash");
+        createDiv[ind].appendChild(createDeleteButton);
     }
 }
 
@@ -42,7 +38,6 @@ function createListElement(){
 
     /* creating li element*/
     var li = document.createElement("li");
-    li.classList.add("li-wrapper"); /*assigning attribute to the created li object*/
     /* crating onother element that will be inserted to div(wrapper)*/
     var createDiv = document.createElement("div");
 
@@ -56,12 +51,13 @@ function createListElement(){
     var createDeleteButton= document.createElement("i");
     createDeleteButton.classList.add("fa","fa-trash");
     createDiv.appendChild(createDeleteButton);
+    console.log("Inital condition correct!!");
     deleteParentNodeOnClick();
 }
 
 function deleteNodeOnClick(e) {
     var trash = document.querySelectorAll("i");
-    for (var ind = 0; ind < trash.length; ind++) {
+    for (var index = 0; index < trash.length; index++) {
         console.log(e);
         this.parentNode.parentNode.remove();
     }
@@ -69,7 +65,9 @@ function deleteNodeOnClick(e) {
 
 function deleteParentNodeOnClick() {
     for (var i = 0; i < deleteButton.length; i++) {
+        console.log("Trying to add  delete button!!!");
         deleteButton[i].addEventListener("click", deleteNodeOnClick);
+        console.log("Delete button added!!"); 
     }
 }
 
